@@ -6,60 +6,50 @@
 <title>TRINITY LOGOS THEOLOGICA v2.6</title>
 <style>
 body{margin:0;font-family:Georgia,serif;background:#0f172a;color:#f1f5f9;text-align:center;padding:20px}
-h1{font-size:30px;color:#ffbb24;letter-spacing:1px}
-.sub{color:#cbd5e1;font-size:16px;line-height:1.5}
-.card{background:#1e293b;border-radius:16px;padding:20px;margin:20px auto;max-width:600px;text-align:left}
-.card h2{color:#ffbb24;text-align:center;margin:0 0 12px}
-textarea{width:100%;padding:13px;border-radius:12px;border:1px solid #475569;background:#0f172a;color:white;font-size:16px;box-sizing:border-box}
-button{width:100%;border:1px solid #ffbb24;border-radius:12px;padding:14px;font-size:17px;font-weight:bold;background:#ffbb24;color:#0f172a;margin-top:12px}
-#respuesta{margin-top:14px;font-size:17px;line-height:1.6;background:#0f172a;padding:15px;border-radius:12px;white-space:pre-wrap}
-small{color:#94a3b8}
+h1{font-size:30px;color:#ffbb24}
+.sub{color:#cbd5e1}
+.card{background:#1e293b;border:1px solid #ffbb24;border-radius:20px;padding:20px;margin:20px auto;max-width:600px;text-align:left}
+.card h2{color:#ffbb24;text-align:center}
+textarea{width:100%;padding:13px;border-radius:12px;background:#0f172a;color:white;font-size:16px;box-sizing:border-box}
+button{width:100%;border:none;border-radius:12px;padding:14px;font-size:17px;font-weight:bold;margin-top:12px}
+.btn-ask{background:#ffbb24;color:#0f172a}
+.btn-voice{background:#334155;color:white;font-size:18px}
+#respuesta{margin-top:14px;font-size:17px;line-height:1.7;background:#0f172a;padding:16px;border-radius:12px;white-space:pre-wrap}
 </style>
 </head>
 <body>
-<h1>TRINITY LOGOS THEOLOGICA v2.6</h1>
-<p class="sub">LOGOS - SOPHIA - PNEUMA<br>SOLI DEO GLORIA</p>
-
+<h1>TRINITY LOGOS<br>THEOLOGICA v2.6</h1>
+<p class="sub">LOGOS • SOPHIA • PNEUMA<br>SOLI DEO GLORIA</p>
 <div class="card">
 <h2>🔥 KERYX - EL HERALDO</h2>
-<p style="text-align:center;color:#cbd5e1">Escribí tu pregunta y presioná al Heraldo</p>
-<textarea id="pregunta" placeholder="Ej: ¿Qué es la fe?"></textarea>
-<button onclick="responder()">✨ PREGUNTAR AL HERALDO - KERYX</button>
+<textarea id="pregunta" placeholder="Ej: Que es el amor?"></textarea>
+<button class="btn-ask" onclick="responder()">✨ PREGUNTAR AL HERALDO - KERYX</button>
+<button class="btn-voice" onclick="hablar()">🔊 🔊 ESCUCHAR CON VOZ</button>
 <div id="respuesta">Aquí va a aparecer la respuesta...</div>
 </div>
-<p><small>Hecho con fe para la Gloria de Dios</small></p>
-
 <script>
+let ultima = "";
 function responder(){
   const p = document.getElementById('pregunta').value.toLowerCase();
   const r = document.getElementById('respuesta');
-  if(p.includes('job')){
-    r.innerText = `TESIS COMPLETA DEL LIBRO DE JOB
-
-1. PREGUNTA CENTRAL
-¿Por qué sufre el justo si Dios es bueno y justo?
-
-2. TESIS PRINCIPAL
-El Libro de Job enseña que el sufrimiento no siempre es castigo por pecado. Dios permite la prueba para revelar Su soberanía, purificar la fe y llevar al creyente a conocer a Dios no solo de oídas, sino por experiencia.
-
-3. DESARROLLO COMPLETO
-- Contexto: Job era íntegro, temeroso de Dios y apartado del mal. Satanás lo acusa de servir a Dios por interés.
-- Problema: Job pierde hijos, bienes y salud en un solo día. Su fe es probada al límite.
-- Error de los amigos: Elifaz, Bildad y Zofar repiten la teología de la retribución: "si sufres, es porque pecaste". Job los confronta porque sabe que es inocente.
-- Respuesta de Dios: Dios no le explica el porqué, le muestra el QUIÉN. Desde el torbellino le revela Su creación, Su poder y Su sabiduría.
-- Conclusión: Job se arrepiente, ora por sus amigos y Dios lo restaura al doble.
-
-4. APLICACIÓN PARA HOY
-Cuando sufras sin entender, no busques siempre una culpa. Busca a Dios. La fe madura no es entender todo, es confiar en Aquel que lo gobierna todo.`;
-  } else if(p.includes('fe')){
-    r.innerText = `TESIS SOBRE LA FE
-
-La fe es confiar en Dios aunque no veas todo. Es certeza de lo que se espera y convicción de lo que no se ve. Hebreos 11:1.
-
-No es solo creer que Dios existe, es entregarle tu vida, tus miedos y tu futuro, sabiendo que Él es fiel.`;
+  if(p.includes('amor')){
+    ultima = "TESIS COMPLETA SOBRE EL AMOR. ¿Qué es el amor según Dios? El amor no es solo un sentimiento, es una decisión. Dios es amor. Primera de Juan 4:8. El amor verdadero se demuestra con entrega, paciencia y sacrificio, como Cristo lo demostró en la cruz. En Primera de Corintios 13 dice que el amor es sufrido, es benigno, no tiene envidia, todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. Hoy amá como Cristo te amó a vos.";
+  } else if(p.includes('job')){
+    ultima = "TESIS COMPLETA DEL LIBRO DE JOB. ¿Por qué sufre el justo si Dios es bueno? El sufrimiento no siempre es castigo por pecado. Dios permite la prueba para revelar Su soberanía y purificar la fe. Job pierde todo, sus amigos lo acusan, pero Dios le muestra Su poder desde el torbellino. Job se arrepiente, ora por sus amigos y Dios lo restaura al doble.";
   } else {
-    r.innerText = "Soy KERYX, El Heraldo. Preguntame por ejemplo: 'Dame una tesis completa del libro de Job' y te daré la tesis completa.";
+    let tema = document.getElementById('pregunta').value;
+    ultima = "TESIS BÍBLICA SOBRE " + tema + ". La Palabra de Dios nos enseña que en medio de " + tema + ", Dios es soberano, bueno y fiel. Él nos llama a confiar, a orar y a esperar en Él. No estás solo, el Espíritu Santo te guía a toda verdad.";
   }
+  r.innerText = ultima;
+  hablar();
+}
+function hablar(){
+  if(!ultima) ultima = document.getElementById('respuesta').innerText;
+  window.speechSynthesis.cancel();
+  const v = new SpeechSynthesisUtterance(ultima);
+  v.lang = 'es-ES';
+  v.rate = 0.95;
+  window.speechSynthesis.speak(v);
 }
 </script>
 </body>
