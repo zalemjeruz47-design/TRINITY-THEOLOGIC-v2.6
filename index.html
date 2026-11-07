@@ -14,8 +14,7 @@ textarea{width:100%;padding:13px;border-radius:12px;background:#0f172a;color:whi
 button{width:100%;border:none;border-radius:12px;padding:14px;font-size:17px;font-weight:bold;margin-top:12px}
 .btn-ask{background:#ffbb24;color:#0f172a}
 .btn-voice{background:#334155;color:white}
-#respuesta{margin-top:14px;font-size:17px;line-height:1.7;background:#0f172a;padding:16px;border-radius:12px;white-space:pre-wrap}
-.agentes{font-size:13px;text-align:center;color:#94a3b8;margin-top:10px}
+#respuesta{margin-top:14px;font-size:17px;line-height:1.75;background:#0f172a;padding:16px;border-radius:12px;white-space:pre-wrap}
 </style>
 </head>
 <body>
@@ -23,88 +22,63 @@ button{width:100%;border:none;border-radius:12px;padding:14px;font-size:17px;fon
 <p class="sub">LOGOS • SOPHIA • PNEUMA<br>SOLI DEO GLORIA</p>
 <div class="card">
 <h2>🔥 KERYX - EL HERALDO</h2>
-<p style="text-align:center;color:#cbd5e1">LOGOS investiga • SOPHIA teología • PNEUMA aplicación • KERYX proclama</p>
-<textarea id="pregunta" placeholder="Ej: Capitulo 3 de Genesis, o Libro de Apocalipsis"></textarea>
+<textarea id="pregunta" placeholder="Ej: Capitulo 3 de Genesis"></textarea>
 <button class="btn-ask" onclick="responder()">✨ PREGUNTAR AL HERALDO - KERYX</button>
 <button class="btn-voice" onclick="hablar()">🔊 ESCUCHAR CON VOZ</button>
 <div id="respuesta">Aquí va a aparecer la respuesta...</div>
-<div class="agentes" id="agentes"></div>
 </div>
 <script>
 let ultima = "";
 function responder(){
   const p = document.getElementById('pregunta').value.toLowerCase();
   const r = document.getElementById('respuesta');
-  const a = document.getElementById('agentes');
-  a.innerText = "LOGOS 🔍 investigando diccionarios... SOPHIA 📖 investigando teología... PNEUMA 🕊️ investigando aplicación... KERYX 📣 proclamando...";
   
   if(p.includes('genesis') && p.includes('3')){
-    ultima = `TESIS COMPLETA - GÉNESIS CAPÍTULO 3 - LA CAÍDA
+    ultima = `TESIS COMPLETA - GÉNESIS CAPÍTULO 3: LA CAÍDA Y LA PRIMERA PROMESA DE SALVACIÓN
 
-INVESTIGACIÓN DE LOS AGENTES:
-LOGOS: La palabra serpiente en hebreo es NACHASH, significa astuto, brillante. Tentación = probar, seducir.
-SOPHIA: Doctrina del pecado original. El hombre quiso ser como Dios sin Dios.
-PNEUMA: Hoy seguimos cayendo cuando dudamos de la bondad de Dios.
+1. CONTEXTO HISTÓRICO Y LITERARIO
+Génesis 3 ocurre en el Edén, después de una creación perfecta donde todo era bueno en gran manera. El autor, Moisés, escribe para un pueblo que sale de Egipto, para enseñarles de dónde viene el pecado, el dolor y la muerte, y por qué necesitan un Salvador. No es un mito, es historia teológica real.
 
-1. PREGUNTA CENTRAL
-¿Cómo entró el pecado al mundo si Dios hizo todo bueno?
+2. INVESTIGACIÓN DEL TEXTO ORIGINAL
+La palabra serpiente en hebreo es NACHASH, que significa astuto, brillante, que susurra. No era una serpiente común, era el instrumento de Satanás. Apocalipsis 12:9 la identifica como la serpiente antigua, el diablo.
+La palabra tentación viene de probar, poner a prueba. Satanás no llegó con violencia, llegó con duda: ¿Conque Dios os ha dicho?
+La palabra pecado aquí es desobediencia, cruzar el límite que Dios puso por amor.
 
-2. TESIS
-Génesis 3 enseña que el pecado entró por desobediencia, por dudar de la Palabra de Dios y querer ser independientes de Él. Pero en el mismo capítulo Dios promete un Salvador.
+3. TESIS CENTRAL
+El pecado entró al mundo no porque Dios falló, sino porque el hombre dudó de la bondad de Dios, deseó ser independiente de Él y desobedeció Su Palabra. Pero en el mismo capítulo donde entra el pecado, Dios ya promete la salvación.
 
-3. DESARROLLO COMPLETO
-- La serpiente: Satanás usa la duda: ¿Conque Dios os ha dicho? Hace dudar de la bondad de Dios.
-- Eva ve el fruto: Bueno para comer, agradable a los ojos, codiciable para alcanzar sabiduría. Así es toda tentación: deseo de la carne, deseo de los ojos, vanagloria de la vida.
-- Adán y Eva comen: Se abren sus ojos, sienten vergüenza, se esconden. El pecado siempre trae culpa, miedo y esconderse de Dios.
-- Dios los busca: ¿Dónde estás tú? Dios no los abandona, los busca.
-- Consecuencias: Dolor en el parto, trabajo con sudor, muerte. La tierra es maldita por causa del hombre.
-- La Promesa: Génesis 3:15, el Protoevangelio. La simiente de la mujer herirá a la serpiente en la cabeza. ¡Esa es la primera promesa de Cristo!
+4. DESARROLLO COMPLETO
+- LA ESTRATEGIA: Satanás hace 3 cosas: 1) Hace dudar de la Palabra: ¿Conque Dios os ha dicho? 2) Niega la consecuencia: No moriréis. 3) Ofrece una falsa promesa: Seréis como Dios.
+- LA CAÍDA: Eva vio el fruto: bueno para comer, agradable a los ojos, codiciable para sabiduría. 1 Juan 2:16 lo llama: deseo de la carne, deseo de los ojos y vanagloria de la vida. Así sigue siendo toda tentación hoy.
+- LAS CONSECUENCIAS INMEDIATAS: Se abrieron sus ojos, sintieron vergüenza, se hicieron delantales de hojas y se escondieron de Dios. El pecado siempre trae culpa, miedo y esconderse.
+- DIOS BUSCA AL HOMBRE: ¿Dónde estás tú? No es que Dios no sabía, es que Dios busca al pecador. La primera pregunta de Dios en la Biblia es una pregunta de amor y búsqueda.
+- LAS CONSECUENCIAS: A la mujer, dolor en el parto y conflicto en el matrimonio. Al hombre, trabajo con sudor y cansancio. A la tierra, espinos y cardos. A todos, la muerte: polvo eres y al polvo volverás.
+- LA PROMESA MÁS GRANDE: Génesis 3:15, el Protoevangelio, el primer evangelio. Pondré enemistad entre ti y la mujer, y entre tu simiente y la simiente suya; ésta te herirá en la cabeza, y tú le herirás en el calcañar. La simiente de la mujer es Cristo. En la cruz, Satanás le hirió el calcañar, pero Cristo le aplastó la cabeza. ¡Ya está vencido!
+- LA COBERTURA: Dios les hizo túnicas de pieles y los vistió. Para cubrirlos, tuvo que morir un animal inocente. Es la primera imagen del sacrificio. Hoy Dios nos cubre no con pieles, sino con la sangre de Cristo.
 
-4. APLICACIÓN PARA HOY
-Cada vez que dudás de Dios, estás en Génesis 3. Pero Dios ya te prometió victoria en Cristo. No te escondas, vení a Él. Él te cubre, como cubrió a Adán y Eva con pieles, hoy te cubre con la sangre de Cristo.`;
+5. CONEXIÓN CON TODA LA BIBLIA
+Romanos 5:12: Por un hombre entró el pecado al mundo. Romanos 5:19: Por la desobediencia de uno, muchos fueron hechos pecadores, por la obediencia de uno, muchos serán hechos justos. Génesis 3 explica por qué necesitamos a Jesús.
+
+6. APLICACIÓN PARA HOY
+Cada vez que dudás de que Dios es bueno, estás en Génesis 3. Cada vez que querés hacer las cosas a tu manera sin Dios, estás comiendo del fruto prohibido. Pero no te escondas. Dios te sigue buscando hoy como buscó a Adán. No te cubras con hojas de religión, de excusas, de vergüenza. Dejá que Él te cubra con Cristo. Tu pecado no es más grande que Su promesa.`;
   } else if(p.includes('apocalipsis') || p.includes('revelacion')){
-    ultima = `TESIS COMPLETA - LIBRO DE APOCALIPSIS - LA VICTORIA FINAL
+    ultima = `TESIS COMPLETA - LIBRO DE APOCALIPSIS: LA REVELACIÓN DE JESUCRISTO Y LA VICTORIA FINAL
 
-INVESTIGACIÓN DE LOS AGENTES:
-LOGOS: Apocalipsis en griego es APOKALYPSIS, significa revelación, quitar el velo. No es terror, es revelación de Cristo.
-SOPHIA: Teología escatológica. Cristo es el Alfa y Omega, el Cordero que venció.
-PNEUMA: La Iglesia debe perseverar, no tener miedo, porque ya ganó Cristo.
+1. CONTEXTO HISTÓRICO
+Apocalipsis fue escrito por el apóstol Juan, exiliado en la isla de Patmos por predicar el evangelio, alrededor del año 95 d.C., bajo la persecución del emperador Domiciano. Las iglesias estaban sufriendo, siendo perseguidas, y muchos pensaban que el mal estaba ganando.
 
-1. PREGUNTA CENTRAL
-¿Cómo terminará todo? ¿Ganará el mal?
+2. INVESTIGACIÓN DEL TEXTO ORIGINAL
+La palabra Apocalipsis en griego es APOKALYPSIS, significa quitar el velo, revelar, descubrir. No significa terror ni fin del mundo. Es la revelación de Jesucristo.
+La palabra Cordero aparece 28 veces. Es el centro del libro. Cristo es el Cordero que fue inmolado y venció.
+La palabra Vencer aparece 17 veces. El mensaje es: el que venciere, heredará todas las cosas.
 
-2. TESIS
-Apocalipsis enseña que Jesucristo ya venció en la cruz, está reinando, y volverá para juzgar el mal, hacer cielos nuevos y tierra nueva, y vivir para siempre con Su Iglesia.
+3. TESIS CENTRAL
+Apocalipsis no es un libro para tener miedo, es un libro para tener esperanza. Enseña que Jesucristo ya venció en la cruz, está reinando ahora, y volverá para juzgar el mal, hacer todo nuevo y vivir para siempre con Su Iglesia.
 
-3. DESARROLLO COMPLETO
-- Capítulo 1: Juan ve a Cristo glorificado, con ojos como llama de fuego, en medio de las 7 iglesias.
-- Capítulos 2-3: Cartas a las 7 iglesias. Cristo corrige, anima y llama al arrepentimiento.
-- Capítulos 4-5: El trono de Dios y el Cordero digno de abrir el libro. Solo Cristo es digno.
-- Capítulos 6-18: Sellos, trompetas y copas. Juicios de Dios sobre el pecado, la bestia, Babilonia. El mal parece ganar, pero no.
-- Capítulo 19: Cristo vuelve en caballo blanco, Rey de reyes y Señor de señores.
-- Capítulo 20: Satanás es atado y lanzado al lago de fuego. Juicio final.
-- Capítulos 21-22: Cielo nuevo y tierra nueva. No más llanto, ni dolor, ni muerte. Dios habitará con Su pueblo.
-
-4. APLICACIÓN PARA HOY
-No tengas miedo del futuro. Si estás en Cristo, tu final ya está escrito: Victoria. Viví santo, perseverá, predicá, porque Cristo viene pronto.`;
-  } else if(p.includes('amor')){
-    ultima = `TESIS COMPLETA SOBRE EL AMOR. Dios es amor. 1 Juan 4:8. El amor no es solo sentimiento, es decisión y sacrificio. 1 Corintios 13: El amor es sufrido, es benigno, todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. Cristo lo demostró en la cruz. Hoy amá como Cristo te amó.`;
-  } else if(p.includes('job')){
-    ultima = `TESIS COMPLETA DEL LIBRO DE JOB. ¿Por qué sufre el justo si Dios es bueno? El sufrimiento no siempre es castigo. Dios permite la prueba para purificar la fe. Job pierde todo, sus amigos lo acusan, pero Dios le muestra Su poder desde el torbellino. Job se arrepiente, ora por sus amigos y Dios lo restaura al doble.`;
-  } else {
-    let tema = document.getElementById('pregunta').value;
-    ultima = `TESIS BÍBLICA SOBRE: ${tema}\n\nINVESTIGACIÓN DE LOS AGENTES:\nLOGOS investigó el idioma original y diccionarios sobre ${tema}.\nSOPHIA investigó la doctrina y teología sobre ${tema}.\nPNEUMA investigó la aplicación del Espíritu para hoy.\n\nTESIS: La Biblia enseña que en ${tema}, Dios es soberano, bueno y fiel. Él nos llama a confiar, orar, obedecer y esperar en Él. Su Palabra es nuestra guía y Cristo es el centro de toda la historia. No estás solo, el Espíritu Santo te guía a toda verdad.\n\nAPLICACIÓN: Hoy entregale a Dios tu tema de ${tema}. Buscalo en oración y confía que Él está obrando aunque no lo veas. Soli Deo Gloria.`;
-  }
-  r.innerText = ultima;
-  hablar();
-}
-function hablar(){
-  if(!ultima) ultima = document.getElementById('respuesta').innerText;
-  window.speechSynthesis.cancel();
-  const v = new SpeechSynthesisUtterance(ultima);
-  v.lang = 'es-ES'; v.rate = 0.95;
-  window.speechSynthesis.speak(v);
-}
-</script>
-</body>
-</html>
+4. DESARROLLO COMPLETO
+- CAPÍTULO 1: Juan ve a Cristo glorificado, con ojos como llama de fuego, pies como bronce, voz como estruendo de muchas aguas. No es el bebé de Belén, es el Rey glorificado.
+- CAPÍTULOS 2-3: Cartas a las 7 iglesias de Asia Menor: Éfeso, Esmirna, Pérgamo, Tiatira, Sardis, Filadelfia, Laodicea. Cristo conoce a cada iglesia, la corrige, la anima y le promete recompensa al que venciere.
+- CAPÍTULOS 4-5: El trono de Dios y el Cordero digno. Nadie era digno de abrir el libro, solo el Cordero que fue inmolado. La adoración en el cielo es porque Él es digno.
+- CAPÍTULOS 6-18: Sellos, trompetas y copas. Son juicios de Dios sobre el pecado, sobre la bestia, sobre Babilonia, que representa el sistema del mundo que se opone a Dios. Parece que el mal gana, pero cada juicio muestra que Dios sigue en control.
+- CAPÍTULO 19: Cristo vuelve en caballo blanco, con vestidura teñida en sangre, Rey de reyes y Señor de señores. La bestia y el falso profeta son lanzados al lago de fuego.
+- CAPÍTULO 20: Satanás es atado por mil años, luego suelto por poco tiempo y finalmente lanzado al lago de fuego para
