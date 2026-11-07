@@ -3,62 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRINITY LOGOS THEOLOGICA v2.6</title>
+<title>KERYX - El Heraldo</title>
 <style>
-body{margin:0;font-family:Georgia,serif;background:#0f172a;color:#f1f5f9;text-align:center;padding:20px 16px 40px}
-h1{font-size:30px;color:#fbbf24;letter-spacing:1px}
-.sub{color:#cbd5e1;font-size:16px;line-height:1.5}
-.card{background:#1e293b;border:1px solid #fbbf24;border-radius:16px;padding:20px;max-width:520px;margin:20px auto;text-align:left}
-.card h2{color:#fbbf24;text-align:center;margin:0 0 12px}
-button{width:100%;border:1px solid #fbbf24;border-radius:12px;padding:14px;font-size:17px;background:#0f172a;color:#fff;margin-bottom:10px;cursor:pointer;text-align:left}
-button b{color:#fbbf24}
-button.heraldo{background:#fbbf24;color:#0f172a;font-weight:bold;text-align:center;font-size:19px}
-#respuesta{margin-top:14px;font-size:17px;line-height:1.6;background:#0f172a;border-radius:12px;padding:14px;min-height:60px}
-input{width:100%;padding:13px;border-radius:12px;border:1px solid #475569;background:#0f172a;color:#fff;font-size:16px;box-sizing:border-box;margin-bottom:10px}
+body{background:#0a0a0a;color:#fff;font-family:Arial;padding:20px}
+h1{color:#f5c542;text-align:center}
+textarea{width:100%;height:80px;border-radius:10px;padding:10px;font-size:16px}
+button{width:100%;padding:15px;background:#f5c542;border:none;border-radius:10px;font-size:18px;font-weight:bold;margin-top:10px}
+#respuesta{background:#1a1a1a;padding:15px;border-radius:10px;margin-top:15px;white-space:pre-wrap;line-height:1.6}
 </style>
 </head>
 <body>
-<h1>TRINITY LOGOS THEOLOGICA v2.6</h1>
-<p class="sub">LOGOS - SOPHIA - PNEUMA<br>SOLI DEO GLORIA</p>
-
-<div class="card">
-<h2>🔊 KERYX - EL HERALDO</h2>
-<p style="text-align:center;color:#cbd5e1">Escribí tu pregunta y presioná al Heraldo. Contesta hablando de una vez.</p>
-<input id="pregunta" placeholder="Ej: ¿Qué es la fe?" />
-<button class="heraldo" onclick="heraldo()">🔊 PREGUNTAR AL HERALDO - KERYX</button>
-<div id="respuesta">Aquí va a aparecer la respuesta...</div>
-</div>
-
-<div class="card">
-<h2>LOS PILARES Y DIMENSIONES</h2>
-<button onclick="hablar('LOGOS. La Palabra, la Verdad, la razón ordenada. En el principio era el Verbo.')">📖 <b>LOGOS</b> - La Palabra, la Verdad</button>
-<button onclick="hablar('SOPHIA. La Sabiduría, el discernimiento para aplicar la verdad en la vida.')">🦉 <b>SOPHIA</b> - La Sabiduría</button>
-<button onclick="hablar('PNEUMA. El Espíritu, la vida y la presencia de Dios.')">🕊️ <b>PNEUMA</b> - El Espíritu</button>
-<button onclick="hablar('NEPHESH. El Alma. Tu vida interior, tus emociones.')">💠 <b>NEPHESH</b> - Alma</button>
-<button onclick="hablar('NOUS. La Mente. El pensamiento, la razón, la comprensión.')">🧠 <b>NOUS</b> - Mente</button>
-<button onclick="hablar('ISCHYS. La Fuerza, el Cuerpo. La acción, la práctica.')">💪 <b>ISCHYS</b> - Fuerza / Cuerpo</button>
-<button onclick="hablar('KARDIA. El Corazón. Donde se guarda la fe y se toma la decisión.')">❤️ <b>KARDIA</b> - Corazón</button>
-</div>
-
+<h1>KERYX - El Heraldo</h1>
+<p style="text-align:center">Preguntame por una tesis bíblica</p>
+<textarea id="pregunta" placeholder="Ej: Dame una tesis completa del libro de Job"></textarea>
+<button onclick="responder()">Preguntar a KERYX</button>
+<div id="respuesta">Aquí aparecerá la respuesta...</div>
 <script>
-function hablar(texto){
-  document.getElementById('respuesta').innerText = texto;
-  window.speechSynthesis.cancel();
-  const voz = new SpeechSynthesisUtterance(texto);
-  voz.lang = 'es-ES';
-  voz.rate = 0.95;
-  window.speechSynthesis.speak(voz);
-}
-function heraldo(){
+function responder(){
   const p = document.getElementById('pregunta').value.toLowerCase();
-  let r = "";
-  if(p.includes("fe")) r = "La fe, según TRINITY: En NOUS, en la mente, es creer en la verdad de Dios. En NEPHESH, en el alma, es confianza. En KARDIA, en el corazón, es entrega. En ISCHYS, en el cuerpo, es actuar conforme a esa fe.";
-  else if(p.includes("logos")) r = "LOGOS es la Palabra, la Verdad, la razón ordenada. Cristo es el LOGOS hecho carne.";
-  else if(p.includes("sophia")) r = "SOPHIA es la Sabiduría, el discernimiento para aplicar la verdad en la vida.";
-  else if(p.includes("pneuma")) r = "PNEUMA es el Espíritu, la vida y la presencia de Dios en ti.";
-  else if(p === "") r = "Soy KERYX, el Heraldo. Escribí tu pregunta y yo te la respondo hablando, de una vez.";
-  else r = "Soy KERYX, el Heraldo de TRINITY. Tu pregunta es: " + document.getElementById('pregunta').value + ". Te respondo con LOGOS, la verdad, SOPHIA, el discernimiento, y PNEUMA, la vida. En NOUS, en NEPHESH, en KARDIA y en ISCHYS, esta verdad se vive completa para la gloria de Dios.";
-  hablar(r);
+  const r = document.getElementById('respuesta');
+  if(p.includes('job')){
+    r.innerText = `TESIS COMPLETA DEL LIBRO DE JOB
+
+1. PREGUNTA CENTRAL
+¿Por qué sufre el justo si Dios es bueno y justo?
+
+2. TESIS PRINCIPAL
+El Libro de Job enseña que el sufrimiento no siempre es castigo por pecado. Dios permite la prueba para revelar Su soberanía, purificar la fe y llevar al creyente a conocer a Dios no solo de oídas, sino por experiencia.
+
+3. DESARROLLO COMPLETO
+- Contexto: Job era íntegro, temeroso de Dios y apartado del mal. Satanás lo acusa de servir a Dios por interés.
+- Problema: Job pierde hijos, bienes y salud en un solo día. Su fe es probada al límite.
+- Error de los amigos: Elifaz, Bildad y Zofar repiten la teología de la retribución: "si sufres, es porque pecaste". Job los confronta porque sabe que es inocente.
+- Respuesta de Dios: Dios no le explica el porqué, le muestra el QUIÉN. Desde el torbellino le revela Su creación, Su poder y Su sabiduría. Job entiende que Dios es suficiente.
+- Conclusión: Job se arrepiente, ora por sus amigos y Dios lo restaura al doble.
+
+4. APLICACIÓN PARA HOY
+Cuando sufras sin entender, no busques siempre una culpa. Busca a Dios. La fe madura no es entender todo, es confiar en Aquel que lo gobierna todo.`;
+  } else {
+    r.innerText = "Soy KERYX, El Heraldo. Preguntame por ejemplo: 'Dame una tesis completa del libro de Job' y te daré la tesis completa con pregunta central, desarrollo y aplicación para hoy.";
+  }
 }
 </script>
 </body>
