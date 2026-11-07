@@ -7,14 +7,15 @@
 <style>
 body{margin:0;font-family:Georgia,serif;background:#0f172a;color:#f1f5f9;text-align:center;padding:20px}
 h1{font-size:30px;color:#ffbb24}
-.sub{color:#cbd5e1}
-.card{background:#1e293b;border:1px solid #ffbb24;border-radius:20px;padding:20px;margin:20px auto;max-width:600px;text-align:left}
+.sub{color:#cbd5e1;letter-spacing:2px}
+.card{background:#1e293b;border:1px solid #ffbb24;border-radius:20px;padding:20px;margin:20px auto;max-width:650px;text-align:left}
 .card h2{color:#ffbb24;text-align:center}
 textarea{width:100%;padding:13px;border-radius:12px;background:#0f172a;color:white;font-size:16px;box-sizing:border-box}
 button{width:100%;border:none;border-radius:12px;padding:14px;font-size:17px;font-weight:bold;margin-top:12px}
 .btn-ask{background:#ffbb24;color:#0f172a}
-.btn-voice{background:#334155;color:white;font-size:18px}
+.btn-voice{background:#334155;color:white}
 #respuesta{margin-top:14px;font-size:17px;line-height:1.7;background:#0f172a;padding:16px;border-radius:12px;white-space:pre-wrap}
+.agentes{font-size:13px;text-align:center;color:#94a3b8;margin-top:10px}
 </style>
 </head>
 <body>
@@ -22,23 +23,77 @@ button{width:100%;border:none;border-radius:12px;padding:14px;font-size:17px;fon
 <p class="sub">LOGOS • SOPHIA • PNEUMA<br>SOLI DEO GLORIA</p>
 <div class="card">
 <h2>🔥 KERYX - EL HERALDO</h2>
-<textarea id="pregunta" placeholder="Ej: Que es el amor?"></textarea>
+<p style="text-align:center;color:#cbd5e1">LOGOS investiga • SOPHIA teología • PNEUMA aplicación • KERYX proclama</p>
+<textarea id="pregunta" placeholder="Ej: Capitulo 3 de Genesis, o Libro de Apocalipsis"></textarea>
 <button class="btn-ask" onclick="responder()">✨ PREGUNTAR AL HERALDO - KERYX</button>
-<button class="btn-voice" onclick="hablar()">🔊 🔊 ESCUCHAR CON VOZ</button>
+<button class="btn-voice" onclick="hablar()">🔊 ESCUCHAR CON VOZ</button>
 <div id="respuesta">Aquí va a aparecer la respuesta...</div>
+<div class="agentes" id="agentes"></div>
 </div>
 <script>
 let ultima = "";
 function responder(){
   const p = document.getElementById('pregunta').value.toLowerCase();
   const r = document.getElementById('respuesta');
-  if(p.includes('amor')){
-    ultima = "TESIS COMPLETA SOBRE EL AMOR. ¿Qué es el amor según Dios? El amor no es solo un sentimiento, es una decisión. Dios es amor. Primera de Juan 4:8. El amor verdadero se demuestra con entrega, paciencia y sacrificio, como Cristo lo demostró en la cruz. En Primera de Corintios 13 dice que el amor es sufrido, es benigno, no tiene envidia, todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. Hoy amá como Cristo te amó a vos.";
+  const a = document.getElementById('agentes');
+  a.innerText = "LOGOS 🔍 investigando diccionarios... SOPHIA 📖 investigando teología... PNEUMA 🕊️ investigando aplicación... KERYX 📣 proclamando...";
+  
+  if(p.includes('genesis') && p.includes('3')){
+    ultima = `TESIS COMPLETA - GÉNESIS CAPÍTULO 3 - LA CAÍDA
+
+INVESTIGACIÓN DE LOS AGENTES:
+LOGOS: La palabra serpiente en hebreo es NACHASH, significa astuto, brillante. Tentación = probar, seducir.
+SOPHIA: Doctrina del pecado original. El hombre quiso ser como Dios sin Dios.
+PNEUMA: Hoy seguimos cayendo cuando dudamos de la bondad de Dios.
+
+1. PREGUNTA CENTRAL
+¿Cómo entró el pecado al mundo si Dios hizo todo bueno?
+
+2. TESIS
+Génesis 3 enseña que el pecado entró por desobediencia, por dudar de la Palabra de Dios y querer ser independientes de Él. Pero en el mismo capítulo Dios promete un Salvador.
+
+3. DESARROLLO COMPLETO
+- La serpiente: Satanás usa la duda: ¿Conque Dios os ha dicho? Hace dudar de la bondad de Dios.
+- Eva ve el fruto: Bueno para comer, agradable a los ojos, codiciable para alcanzar sabiduría. Así es toda tentación: deseo de la carne, deseo de los ojos, vanagloria de la vida.
+- Adán y Eva comen: Se abren sus ojos, sienten vergüenza, se esconden. El pecado siempre trae culpa, miedo y esconderse de Dios.
+- Dios los busca: ¿Dónde estás tú? Dios no los abandona, los busca.
+- Consecuencias: Dolor en el parto, trabajo con sudor, muerte. La tierra es maldita por causa del hombre.
+- La Promesa: Génesis 3:15, el Protoevangelio. La simiente de la mujer herirá a la serpiente en la cabeza. ¡Esa es la primera promesa de Cristo!
+
+4. APLICACIÓN PARA HOY
+Cada vez que dudás de Dios, estás en Génesis 3. Pero Dios ya te prometió victoria en Cristo. No te escondas, vení a Él. Él te cubre, como cubrió a Adán y Eva con pieles, hoy te cubre con la sangre de Cristo.`;
+  } else if(p.includes('apocalipsis') || p.includes('revelacion')){
+    ultima = `TESIS COMPLETA - LIBRO DE APOCALIPSIS - LA VICTORIA FINAL
+
+INVESTIGACIÓN DE LOS AGENTES:
+LOGOS: Apocalipsis en griego es APOKALYPSIS, significa revelación, quitar el velo. No es terror, es revelación de Cristo.
+SOPHIA: Teología escatológica. Cristo es el Alfa y Omega, el Cordero que venció.
+PNEUMA: La Iglesia debe perseverar, no tener miedo, porque ya ganó Cristo.
+
+1. PREGUNTA CENTRAL
+¿Cómo terminará todo? ¿Ganará el mal?
+
+2. TESIS
+Apocalipsis enseña que Jesucristo ya venció en la cruz, está reinando, y volverá para juzgar el mal, hacer cielos nuevos y tierra nueva, y vivir para siempre con Su Iglesia.
+
+3. DESARROLLO COMPLETO
+- Capítulo 1: Juan ve a Cristo glorificado, con ojos como llama de fuego, en medio de las 7 iglesias.
+- Capítulos 2-3: Cartas a las 7 iglesias. Cristo corrige, anima y llama al arrepentimiento.
+- Capítulos 4-5: El trono de Dios y el Cordero digno de abrir el libro. Solo Cristo es digno.
+- Capítulos 6-18: Sellos, trompetas y copas. Juicios de Dios sobre el pecado, la bestia, Babilonia. El mal parece ganar, pero no.
+- Capítulo 19: Cristo vuelve en caballo blanco, Rey de reyes y Señor de señores.
+- Capítulo 20: Satanás es atado y lanzado al lago de fuego. Juicio final.
+- Capítulos 21-22: Cielo nuevo y tierra nueva. No más llanto, ni dolor, ni muerte. Dios habitará con Su pueblo.
+
+4. APLICACIÓN PARA HOY
+No tengas miedo del futuro. Si estás en Cristo, tu final ya está escrito: Victoria. Viví santo, perseverá, predicá, porque Cristo viene pronto.`;
+  } else if(p.includes('amor')){
+    ultima = `TESIS COMPLETA SOBRE EL AMOR. Dios es amor. 1 Juan 4:8. El amor no es solo sentimiento, es decisión y sacrificio. 1 Corintios 13: El amor es sufrido, es benigno, todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. Cristo lo demostró en la cruz. Hoy amá como Cristo te amó.`;
   } else if(p.includes('job')){
-    ultima = "TESIS COMPLETA DEL LIBRO DE JOB. ¿Por qué sufre el justo si Dios es bueno? El sufrimiento no siempre es castigo por pecado. Dios permite la prueba para revelar Su soberanía y purificar la fe. Job pierde todo, sus amigos lo acusan, pero Dios le muestra Su poder desde el torbellino. Job se arrepiente, ora por sus amigos y Dios lo restaura al doble.";
+    ultima = `TESIS COMPLETA DEL LIBRO DE JOB. ¿Por qué sufre el justo si Dios es bueno? El sufrimiento no siempre es castigo. Dios permite la prueba para purificar la fe. Job pierde todo, sus amigos lo acusan, pero Dios le muestra Su poder desde el torbellino. Job se arrepiente, ora por sus amigos y Dios lo restaura al doble.`;
   } else {
     let tema = document.getElementById('pregunta').value;
-    ultima = "TESIS BÍBLICA SOBRE " + tema + ". La Palabra de Dios nos enseña que en medio de " + tema + ", Dios es soberano, bueno y fiel. Él nos llama a confiar, a orar y a esperar en Él. No estás solo, el Espíritu Santo te guía a toda verdad.";
+    ultima = `TESIS BÍBLICA SOBRE: ${tema}\n\nINVESTIGACIÓN DE LOS AGENTES:\nLOGOS investigó el idioma original y diccionarios sobre ${tema}.\nSOPHIA investigó la doctrina y teología sobre ${tema}.\nPNEUMA investigó la aplicación del Espíritu para hoy.\n\nTESIS: La Biblia enseña que en ${tema}, Dios es soberano, bueno y fiel. Él nos llama a confiar, orar, obedecer y esperar en Él. Su Palabra es nuestra guía y Cristo es el centro de toda la historia. No estás solo, el Espíritu Santo te guía a toda verdad.\n\nAPLICACIÓN: Hoy entregale a Dios tu tema de ${tema}. Buscalo en oración y confía que Él está obrando aunque no lo veas. Soli Deo Gloria.`;
   }
   r.innerText = ultima;
   hablar();
@@ -47,8 +102,7 @@ function hablar(){
   if(!ultima) ultima = document.getElementById('respuesta').innerText;
   window.speechSynthesis.cancel();
   const v = new SpeechSynthesisUtterance(ultima);
-  v.lang = 'es-ES';
-  v.rate = 0.95;
+  v.lang = 'es-ES'; v.rate = 0.95;
   window.speechSynthesis.speak(v);
 }
 </script>
