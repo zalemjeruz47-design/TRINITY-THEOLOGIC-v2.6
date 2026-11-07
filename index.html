@@ -3,21 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KERYX - El Heraldo</title>
+<title>TRINITY LOGOS THEOLOGICA v2.6</title>
 <style>
-body{background:#0a0a0a;color:#fff;font-family:Arial;padding:20px}
-h1{color:#f5c542;text-align:center}
-textarea{width:100%;height:80px;border-radius:10px;padding:10px;font-size:16px}
-button{width:100%;padding:15px;background:#f5c542;border:none;border-radius:10px;font-size:18px;font-weight:bold;margin-top:10px}
-#respuesta{background:#1a1a1a;padding:15px;border-radius:10px;margin-top:15px;white-space:pre-wrap;line-height:1.6}
+body{margin:0;font-family:Georgia,serif;background:#0f172a;color:#f1f5f9;text-align:center;padding:20px}
+h1{font-size:30px;color:#ffbb24;letter-spacing:1px}
+.sub{color:#cbd5e1;font-size:16px;line-height:1.5}
+.card{background:#1e293b;border-radius:16px;padding:20px;margin:20px auto;max-width:600px;text-align:left}
+.card h2{color:#ffbb24;text-align:center;margin:0 0 12px}
+textarea{width:100%;padding:13px;border-radius:12px;border:1px solid #475569;background:#0f172a;color:white;font-size:16px;box-sizing:border-box}
+button{width:100%;border:1px solid #ffbb24;border-radius:12px;padding:14px;font-size:17px;font-weight:bold;background:#ffbb24;color:#0f172a;margin-top:12px}
+#respuesta{margin-top:14px;font-size:17px;line-height:1.6;background:#0f172a;padding:15px;border-radius:12px;white-space:pre-wrap}
+small{color:#94a3b8}
 </style>
 </head>
 <body>
-<h1>KERYX - El Heraldo</h1>
-<p style="text-align:center">Preguntame por una tesis bíblica</p>
-<textarea id="pregunta" placeholder="Ej: Dame una tesis completa del libro de Job"></textarea>
-<button onclick="responder()">Preguntar a KERYX</button>
-<div id="respuesta">Aquí aparecerá la respuesta...</div>
+<h1>TRINITY LOGOS THEOLOGICA v2.6</h1>
+<p class="sub">LOGOS - SOPHIA - PNEUMA<br>SOLI DEO GLORIA</p>
+
+<div class="card">
+<h2>🔥 KERYX - EL HERALDO</h2>
+<p style="text-align:center;color:#cbd5e1">Escribí tu pregunta y presioná al Heraldo</p>
+<textarea id="pregunta" placeholder="Ej: ¿Qué es la fe?"></textarea>
+<button onclick="responder()">✨ PREGUNTAR AL HERALDO - KERYX</button>
+<div id="respuesta">Aquí va a aparecer la respuesta...</div>
+</div>
+<p><small>Hecho con fe para la Gloria de Dios</small></p>
+
 <script>
 function responder(){
   const p = document.getElementById('pregunta').value.toLowerCase();
@@ -35,13 +46,19 @@ El Libro de Job enseña que el sufrimiento no siempre es castigo por pecado. Dio
 - Contexto: Job era íntegro, temeroso de Dios y apartado del mal. Satanás lo acusa de servir a Dios por interés.
 - Problema: Job pierde hijos, bienes y salud en un solo día. Su fe es probada al límite.
 - Error de los amigos: Elifaz, Bildad y Zofar repiten la teología de la retribución: "si sufres, es porque pecaste". Job los confronta porque sabe que es inocente.
-- Respuesta de Dios: Dios no le explica el porqué, le muestra el QUIÉN. Desde el torbellino le revela Su creación, Su poder y Su sabiduría. Job entiende que Dios es suficiente.
+- Respuesta de Dios: Dios no le explica el porqué, le muestra el QUIÉN. Desde el torbellino le revela Su creación, Su poder y Su sabiduría.
 - Conclusión: Job se arrepiente, ora por sus amigos y Dios lo restaura al doble.
 
 4. APLICACIÓN PARA HOY
 Cuando sufras sin entender, no busques siempre una culpa. Busca a Dios. La fe madura no es entender todo, es confiar en Aquel que lo gobierna todo.`;
+  } else if(p.includes('fe')){
+    r.innerText = `TESIS SOBRE LA FE
+
+La fe es confiar en Dios aunque no veas todo. Es certeza de lo que se espera y convicción de lo que no se ve. Hebreos 11:1.
+
+No es solo creer que Dios existe, es entregarle tu vida, tus miedos y tu futuro, sabiendo que Él es fiel.`;
   } else {
-    r.innerText = "Soy KERYX, El Heraldo. Preguntame por ejemplo: 'Dame una tesis completa del libro de Job' y te daré la tesis completa con pregunta central, desarrollo y aplicación para hoy.";
+    r.innerText = "Soy KERYX, El Heraldo. Preguntame por ejemplo: 'Dame una tesis completa del libro de Job' y te daré la tesis completa.";
   }
 }
 </script>
